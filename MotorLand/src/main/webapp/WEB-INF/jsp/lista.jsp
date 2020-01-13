@@ -1,3 +1,4 @@
+<!-- asignacion de prefijo a la libreria de Spring -->
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,17 +16,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
-function ocultar() 
-{
-    $(".mensaje").fadeOut(2000);
-} 
-setTimeout("ocultar()", 2000);
-    var parametro;
-    function dato(p)
-    {
-        parametro=p
-    }
-        </script>
+
     </head>
     <body>
         <div class="hueco" style="height:50px;">
@@ -56,6 +47,7 @@ setTimeout("ocultar()", 2000);
                                 <td><c:out value="${motores.potencia}" /></td>
                                 <td><c:out value="${motores.peso}" /></td>
                                 <td><c:out value="${motores.cantidad}" /></td>
+                                <!-- Etiqueta spring buscada en google para poder un valor u otro segun una condicion -->
                                 <td><c:choose><c:when test="${motores.peso/motores.potencia<'10'}">Si</c:when>  <c:otherwise>No</c:otherwise></c:choose> </td>
     
        

@@ -1,4 +1,5 @@
- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"   %>
+<!-- asignacion de prefijos a la libreria de Spring --> 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"   %>
 <%@taglib  prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,28 +23,30 @@
                             <p>
                                 <form:label path="modelo">Modelo:</form:label>
                                 <form:input path="modelo" cssClass="form-control"/>
+                                <!-- Label e input con etiqueta Spring para le alta del modelo.-->
                                 
                             </p>
                             
                             <p>
                                 <form:label path="fabricante">Fabricante</form:label>
                                 <form:input path="fabricante" cssClass="form-control" />
+                                <!-- Label e input con etiqueta Spring para le alta del fabricante. -->
                             </p>
                             
                               <p>
                                 <form:label path="potencia">Potencia:</form:label>
                                 <form:input path="potencia" cssClass="form-control"/>
-                                <!--<input type="text" id="potencia" name="potencia" class="form-control">-->
+                                <!-- Label e input con etiqueta Spring para le alta de la potencia. -->
                             </p>
                               <p>
                                 <form:label path="peso">Peso:</form:label>
                                  <form:input path="peso" cssClass="form-control"/>
-                                <!--<input type="text" id="peso" name="peso" class="form-control">-->
+                               <!-- Label e input con etiqueta Spring para le alta del peso. -->
                             </p>
                               <p>
                                 <form:label path="cantidad">Cantidad:</form:label>
                                 <form:input path="cantidad" cssClass="form-control"/>
-                                <!-- <input type="text" id="cantidad" name="cantidad" class="form-control">-->
+                                <!-- Label e input con etiqueta Spring para le alta de las cantidades. -->
                             </p>
                             
                             <br/>

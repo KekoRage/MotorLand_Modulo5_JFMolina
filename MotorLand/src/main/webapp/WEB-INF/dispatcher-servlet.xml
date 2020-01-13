@@ -19,6 +19,7 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
+                <!-- Asignamos a cada htm un nombre de controller para mas adelante asignarle un controller en el indice. -->
                 <prop key="alta.htm">altaMotor</prop>
                 <prop key="lista.htm">listarMotor</prop>
             </props>
@@ -33,7 +34,9 @@
     <!--
     The index controller.
     -->
-   
+      <!--
+    Este es el indice de controllers donde asignamos a cada nombre la ruta donde esta el controller que tiene que usar.
+    -->
     <bean name="altaMotor" class="Controllers.altaMotor" />
      <bean name="listarMotor" class="Controllers.listarMotor" />
 

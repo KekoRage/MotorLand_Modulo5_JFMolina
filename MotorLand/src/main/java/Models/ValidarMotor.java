@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package Models;
-
+/**
+ *
+ * @author kekor
+ */
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-
+/* Clase para realizar las validaciones*/
 public class ValidarMotor implements Validator {
 
    

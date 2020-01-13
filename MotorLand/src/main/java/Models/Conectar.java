@@ -1,8 +1,11 @@
 
 package Models;
-
+/**
+ *
+ * @author kekor
+ */
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
+/* Clase java donde le ponemos los atributos necesarios para realizar la conexion con BBDD.*/
 public class Conectar {
  
     public DriverManagerDataSource conectar()

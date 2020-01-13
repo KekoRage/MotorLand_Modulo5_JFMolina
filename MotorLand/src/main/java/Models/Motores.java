@@ -9,6 +9,7 @@ package Models;
  *
  * @author kekor
  */
+/* Clase donde esta el constructor y los getters and setters del objeto que queremos insertar en la BBDD*/
 public class Motores {
    private  String modelo, fabricante;
    private int potencia, cantidad, peso;

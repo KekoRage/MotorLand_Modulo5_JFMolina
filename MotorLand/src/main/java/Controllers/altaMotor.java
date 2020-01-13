@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package Controllers;
-
+/**
+ *
+ * @author kekor
+ */
 import Models.Conectar;
 import Models.Motores;
 import Models.ValidarMotor;
@@ -16,21 +19,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+/* Controlador del alta de motores, donde se llama a las validaciobnes, iniciamos la conexion con BBDD y 
+realizamos la query para insertar los valores en la tabla*/
 @Controller
-@RequestMapping("alta.htm")
+@RequestMapping("alta.htm") /* indicamos a que pagina mapeamos con este controller*/
 public class altaMotor {
     
     
     private JdbcTemplate jdbcTemplate;
     private ValidarMotor validar;
     
-    public altaMotor() 
+    public altaMotor()  /*constructor que crea a su vez la conexion, el validador y el JDBC*/
     {
                 Conectar con=new Conectar();
         this.jdbcTemplate=new JdbcTemplate(con.conectar() );
         this.validar = new ValidarMotor();
     }
-    @RequestMapping(method=RequestMethod.GET) 
+    @RequestMapping(method=RequestMethod.GET) /* le indicamos lo que tiene que hacer cuando venga por GET*/
     public ModelAndView alta()
     {
         ModelAndView mav=new ModelAndView();
@@ -38,7 +43,7 @@ public class altaMotor {
         mav.addObject("motor",new Motores());
         return mav;
     }
-    @RequestMapping(method=RequestMethod.POST)
+    @RequestMapping(method=RequestMethod.POST) /* le indicamos lo que tiene que hacer cuando venga por POST*/
     public ModelAndView alta
         (
                 @ModelAttribute("motor") Motores m,
